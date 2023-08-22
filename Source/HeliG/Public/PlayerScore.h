@@ -3,14 +3,14 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "GameFramework/HUD.h"
-#include "FPSHUD.generated.h"
+#include "Blueprint/UserWidget.h"
+#include "PlayerScore.generated.h"
 
 /**
  * 
  */
 UCLASS()
-class HELIG_API AFPSHUD : public AHUD
+class HELIG_API UPlayerScore : public UUserWidget
 {
 	GENERATED_BODY()
 	
