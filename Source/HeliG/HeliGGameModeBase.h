@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/GameModeBase.h"
+#include "W_PlayerScore.h"
 #include "HeliGGameModeBase.generated.h"
 
 /**
@@ -15,5 +16,12 @@ class HELIG_API AHeliGGameModeBase : public AGameModeBase
 	GENERATED_BODY()
 
 public:
+	UPROPERTY()
+	UW_PlayerScore* CurrentWidget;
+
+protected:
 	virtual void StartPlay() override;
+
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	TSubclassOf<class UW_PlayerScore> StartingWidgetClass;
 };
