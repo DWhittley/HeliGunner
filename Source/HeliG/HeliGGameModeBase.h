@@ -13,5 +13,7 @@ UCLASS()
 class HELIG_API AHeliGGameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+
+public:
+	virtual void StartPlay() override;
 };
