@@ -3,18 +3,22 @@
 
 #include "W_PlayerScore.h"
 
-void UW_PlayerScore::SetScore(int value)
+void UW_PlayerScore::NativeConstruct()
 {
-	if (ScoreText)
-	{
-		ScoreText->SetText(FText::FromString(FString::FromInt(value)));
-	}
+	SetScore(0);
+	SetAmmo(100);
 }
 
-void UW_PlayerScore::SetAmmo(int value)
+void UW_PlayerScore::SetScore(int score)
 {
-	if (AmmoText)
-	{
-		AmmoText->SetText(FText::FromString(FString::FromInt(value)));
-	}
+	if (!ScoreText) return;
+	
+	ScoreText->SetText(FText::FromString(FString::FromInt(score)));
+}
+
+void UW_PlayerScore::SetAmmo(int ammo)
+{
+	if (!AmmoText) return;
+	
+	AmmoText->SetText(FText::FromString(FString::FromInt(ammo)));
 }

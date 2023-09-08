@@ -16,15 +16,23 @@ class HELIG_API UW_PlayerScore : public UUserWidget
 	GENERATED_BODY()
 
 public:
+	virtual void NativeConstruct() override;
+
 	UPROPERTY(meta = (BindWidget))
 	UTextBlock* ScoreText;
 
 	UPROPERTY(meta = (BindWidget))
 	UTextBlock* AmmoText;
 
-	int Score;
+	UFUNCTION()
+	
 	void SetScore(int value);
 
-	int Ammo;
+	UFUNCTION()
+	
 	void SetAmmo(int value);
+
+private:
+	int Score;
+	int Ammo;
 };
