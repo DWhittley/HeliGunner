@@ -5,7 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "W_PlayerScore.h"
-//#include "HeliGGameModeBase.h"
+//#include "HeliGGameModeBase.h"  // says can't find the game mode
 #include "BP_Player.generated.h"
 
 UCLASS()
