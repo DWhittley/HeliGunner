@@ -4,6 +4,8 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "W_PlayerScore.h"
+//#include "HeliGGameModeBase.h"
 #include "BP_Player.generated.h"
 
 UCLASS()

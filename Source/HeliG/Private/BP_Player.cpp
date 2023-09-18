@@ -36,8 +36,8 @@ void ABP_Player::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
 	// Look
-	PlayerInputComponent->BindAxis("Turn", this, &ABP_Player::AddControllerYawInput);
-	PlayerInputComponent->BindAxis("LookUp", this, &ABP_Player::AddControllerPitchInput);
+	PlayerInputComponent->BindAxis("LookHorizontal", this, &ABP_Player::AddControllerYawInput);
+	PlayerInputComponent->BindAxis("LookVertical", this, &ABP_Player::AddControllerPitchInput);
 
 }
 
