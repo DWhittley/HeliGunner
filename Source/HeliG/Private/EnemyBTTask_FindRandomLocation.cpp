@@ -10,7 +10,7 @@ UEnemyBTTask_FindRandomLocation::UEnemyBTTask_FindRandomLocation()
 {
 	NodeName = TEXT("Find Random Location");
 
-	// accept only vectors
+	// accept only vectors for the blackboard key so add filter
 	BlackboardKey.AddVectorFilter(this, GET_MEMBER_NAME_CHECKED(UEnemyBTTask_FindRandomLocation, BlackboardKey));
 }
 
@@ -30,7 +30,7 @@ EBTNodeResult::Type UEnemyBTTask_FindRandomLocation::ExecuteTask(UBehaviorTreeCo
 	if (IsValid(NavSystem) && NavSystem->GetRandomPointInNavigableRadius(Origin, SearchRadius, Location))
 	{
 		AIController->GetBlackboardComponent()->SetValueAsVector(BlackboardKey.SelectedKeyName,
-			Location.Location);
+			Location.Location);  // set the location vector as the location to go to
 	}
 
 	// Signal the BehaviorTreeComponent that the task finished with success
